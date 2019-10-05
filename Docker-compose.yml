@@ -1,0 +1,51 @@
+version: "3"
+services:
+  mongo:
+    container_name: sample_mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+    logging:
+      driver: none
+
+  redis:
+    image: redis
+    container_name: sample_cache
+    expose:
+      - 6379
+
+  api:
+    container_name: sample_nodejs_api
+    restart: always
+    build: ./packages/api
+    ports:
+      - "3030:3030"
+      - "9229:9229"
+    volumes:
+      - ./packages/api:/usr/src/app
+    links:
+      - mongo
+      - redis
+    command: yarn debug
+
+  socket:
+    container_name: sample_nodejs_socket
+    restart: always
+    build: ./packages/socket
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./packages/api:/usr/src/app
+    links:
+      - mongo
+      - redis
+    command: yarn debug
+
+  client:
+    build: ./packages/client/
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./packages/client:/usr/src/app
+    links:
+      - api
