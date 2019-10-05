@@ -12,7 +12,7 @@
     "watch-constants": "cd packages/constants && yarn start",
     "build": "lerna run --concurrency 1 build --stream",
     "prettier": "prettier --write \"packages/**/*.js\"",
-    "detect:changes": "lerna changed",
+    "detect:changes": "lerna changed --all --graph",
     "update-version": "lerna version --conventional-commits --skip-npm --force-publish '*'"
   },
   "workspaces": [
