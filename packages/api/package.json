@@ -3,8 +3,14 @@
   "version": "1.0.2",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "start": "yarn prod",
+    "server": "babel-node ./src/bin/www",
+    "server:prod": "node ./dist/bin/www",
+    "dev": "NODE_ENV=development yarn server",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist",
+    "prod": "NODE_ENV=production yarn clean && yarn build && yarn server:prod",
+    "watch": "nodemon"
   },
   "dependencies": {
     "@workspace/common": "^1.0.2",
@@ -14,6 +20,13 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2"
   }
 }

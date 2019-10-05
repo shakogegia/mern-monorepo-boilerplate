@@ -1,5 +1,7 @@
 /.cache
 .tmp
 node_modules
+dist
+build
 *.log
 *.production

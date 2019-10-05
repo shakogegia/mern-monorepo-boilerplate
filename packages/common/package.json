@@ -7,6 +7,10 @@
   "homepage": "https://github.com/shakogegia/mern-monorepo-boilerplate/tree/master/packages/common#readme",
   "license": "ISC",
   "main": "lib/common.js",
+  "scripts": {
+    "dev": "",
+    "build": ""
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -16,8 +20,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   }
 }

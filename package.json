@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "concurrently -n w \"yarn:watch-*\"",
-    "watch-api": "cd packages/api && yarn dev",
-    "watch-socket": "cd packages/socket && yarn dev",
+    "watch-api": "cd packages/api && yarn watch",
+    "watch-socket": "cd packages/socket && yarn watch",
     "watch-client": "cd packages/client && yarn start",
     "build": "lerna run --concurrency 1 build --stream",
     "prettier": "prettier --write \"packages/**/*.js\"",
