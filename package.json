@@ -8,7 +8,7 @@
     "watch-api": "cd packages/api && yarn dev",
     "watch-socket": "cd packages/socket && yarn dev",
     "watch-client": "cd packages/client && yarn start",
-    "build": "lerna run build --stream",
+    "build": "lerna run --concurrency 1 build --stream",
     "prettier": "prettier --write \"packages/**/*.js\"",
     "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'"
   },
@@ -17,7 +17,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run --concurrency 1 --stream precommit"
+      "pre-commit": "yarn lint-staged"
     }
   },
   "repository": {
