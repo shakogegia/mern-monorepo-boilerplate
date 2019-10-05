@@ -1,3 +1,6 @@
 {
-  "*": "yarn prettier"
+  "*.js": [
+    "prettier --write",
+    "git add ."
+  ]
 }
