@@ -24,5 +24,8 @@
   "devDependencies": {
     "@babel/cli": "^7.6.2",
     "babel-watch": "^7.0.0"
+  },
+  "dependencies": {
+    "@workspace/constants": "^1.0.2"
   }
 }
