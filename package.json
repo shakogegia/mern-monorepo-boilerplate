@@ -4,11 +4,11 @@
   "description": "MERN Monorepo Boilerplate",
   "private": true,
   "scripts": {
-    "build": "lerna run build --stream",
+    "dev": "concurrently -n w \"yarn:watch-*\"",
     "watch-api": "cd packages/api && yarn dev",
     "watch-socket": "cd packages/socket && yarn dev",
     "watch-client": "cd packages/client && yarn start",
-    "dev": "concurrently -n w \"yarn:watch-*\"",
+    "build": "lerna run build --stream",
     "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'"
   },
   "workspaces": [
