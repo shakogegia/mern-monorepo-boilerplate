@@ -1,4 +1,5 @@
 import React from 'react';
+import common from '@workspace/common';
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,6 +11,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <pre>
+          {common.SHARE_VAR}
+        </pre>
         <a
           className="App-link"
           href="https://reactjs.org"
