@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const constants = require('..');
+const constants = require('..')
 
 describe('@workspace/constants', () => {
-    it('needs tests');
-});
+  it('needs tests')
+})

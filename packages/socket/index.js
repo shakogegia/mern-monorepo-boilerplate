@@ -1,7 +1,7 @@
 require('dotenv').config()
 
-var io = require('socket.io')(process.env.PORT);
+const io = require('socket.io')(process.env.PORT)
 
-io.on('connection', function(socket){
-  console.log('a user connected');
-});
+io.on('connection', socket => {
+  console.log('a user connected')
+})

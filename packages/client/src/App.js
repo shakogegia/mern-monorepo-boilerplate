@@ -1,7 +1,7 @@
-import React from 'react';
-import common from '@workspace/constants';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import common from '@workspace/constants'
+import logo from './logo.svg'
+import './App.css'
 
 function App() {
   return (
@@ -11,9 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <pre>
-          {common.PROJECT_NAME}
-        </pre>
+        <pre>{common.PROJECT_NAME}</pre>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -24,7 +22,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

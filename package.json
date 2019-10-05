@@ -9,6 +9,7 @@
     "watch-socket": "cd packages/socket && yarn dev",
     "watch-client": "cd packages/client && yarn start",
     "build": "lerna run build --stream",
+    "prettier": "prettier --write \"packages/**/*.js\"",
     "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'"
   },
   "workspaces": [
@@ -33,5 +34,12 @@
     "concurrently": "^4.1.2",
     "cross-env": "^6.0.3",
     "lerna": "^3.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
   }
 }

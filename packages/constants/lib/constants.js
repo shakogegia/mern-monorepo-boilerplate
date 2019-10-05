@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
 const constants = {
-  PROJECT_NAME: "MERN Monorepo Boilerplate"
+  PROJECT_NAME: 'MERN Monorepo Boilerplate',
 }
 
-module.exports = constants;
+module.exports = constants
