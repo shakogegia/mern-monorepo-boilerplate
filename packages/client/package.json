@@ -1,10 +1,10 @@
 {
   "name": "client",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "dependencies": {
-    "@workspace/common": "^1.0.3",
-    "@workspace/constants": "^1.0.3",
+    "@workspace/common": "^1.0.4",
+    "@workspace/constants": "^1.0.4",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"

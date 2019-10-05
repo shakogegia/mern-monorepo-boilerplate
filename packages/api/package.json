@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "scripts": {
     "start": "yarn prod",
@@ -13,8 +13,8 @@
     "watch": "nodemon"
   },
   "dependencies": {
-    "@workspace/common": "^1.0.3",
-    "@workspace/constants": "^1.0.3",
+    "@workspace/common": "^1.0.4",
+    "@workspace/constants": "^1.0.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.1.0",
