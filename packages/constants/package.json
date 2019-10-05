@@ -6,7 +6,11 @@
   "author": "Shalva Gegia <shalva.gegia@gmail.com>",
   "homepage": "https://github.com/shakogegia/mern-monorepo-boilerplate/tree/master/packages/constants#readme",
   "license": "ISC",
-  "main": "lib/constants.js",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "babel ./src -d build -w",
+    "build": "babel ./src --out-dir build"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -20,9 +24,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shakogegia/mern-monorepo-boilerplate.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/shakogegia/mern-monorepo-boilerplate/issues"

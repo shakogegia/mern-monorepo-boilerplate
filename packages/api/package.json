@@ -5,10 +5,10 @@
   "scripts": {
     "start": "yarn prod",
     "server": "babel-node ./src/bin/www",
-    "server:prod": "node ./dist/bin/www",
+    "server:prod": "node ./build/bin/www",
     "dev": "NODE_ENV=development yarn server",
-    "clean": "rimraf dist",
-    "build": "babel ./src --out-dir dist",
+    "clean": "rimraf build",
+    "build": "babel ./src --out-dir build",
     "prod": "NODE_ENV=production yarn clean && yarn build && yarn server:prod",
     "watch": "nodemon"
   },

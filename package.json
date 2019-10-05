@@ -8,6 +8,8 @@
     "watch-api": "cd packages/api && yarn watch",
     "watch-socket": "cd packages/socket && yarn watch",
     "watch-client": "cd packages/client && yarn start",
+    "watch-common": "cd packages/common && yarn start",
+    "watch-constants": "cd packages/constants && yarn start",
     "build": "lerna run --concurrency 1 build --stream",
     "prettier": "prettier --write \"packages/**/*.js\"",
     "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'"

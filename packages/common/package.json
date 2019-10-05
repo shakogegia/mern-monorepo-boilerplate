@@ -6,10 +6,10 @@
   "author": "Shalva Gegia <shalva.gegia@gmail.com>",
   "homepage": "https://github.com/shakogegia/mern-monorepo-boilerplate/tree/master/packages/common#readme",
   "license": "ISC",
-  "main": "lib/common.js",
+  "main": "build/index.js",
   "scripts": {
-    "dev": "",
-    "build": ""
+    "start": "babel ./src -d build -w",
+    "build": "babel ./src --out-dir build"
   },
   "directories": {
     "lib": "lib",
@@ -20,5 +20,9 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "babel-watch": "^7.0.0"
   }
 }
