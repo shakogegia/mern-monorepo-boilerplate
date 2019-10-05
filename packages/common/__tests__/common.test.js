@@ -1,7 +1,7 @@
-'use strict'
+"use strict"
 
-const common = require('..')
+const common = require("..")
 
-describe('@workspace/common', () => {
-  it('needs tests')
+describe("@workspace/common", () => {
+  it("needs tests")
 })

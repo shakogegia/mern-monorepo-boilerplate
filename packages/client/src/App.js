@@ -1,7 +1,7 @@
-import React from 'react'
-import common from '@workspace/constants'
-import logo from './logo.svg'
-import './App.css'
+import React from "react"
+import common from "@workspace/constants"
+import logo from "./logo.svg"
+import "./App.css"
 
 function App() {
   return (

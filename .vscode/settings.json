@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": false,
+  "javascript.format.enable": false,
+  "eslint.autoFixOnSave": true,
+
+  "[git-commit]": {
+    "editor.rulers": [72]
+  }
+}
