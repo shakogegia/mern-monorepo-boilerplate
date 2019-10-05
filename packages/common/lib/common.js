@@ -1,7 +1,3 @@
-'use strict';
+const capitalize = (str) => string.charAt(0).toUpperCase() + string.slice(1);
 
-const common = {
-  SHARE_VAR: "this is from @workspace/common package"
-}
-
-module.exports = common;
+export { capitalize }

@@ -1,5 +1,5 @@
 import React from 'react';
-import common from '@workspace/common';
+import common from '@workspace/constants';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,7 +12,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <pre>
-          {common.SHARE_VAR}
+          {common.PROJECT_NAME}
         </pre>
         <a
           className="App-link"
