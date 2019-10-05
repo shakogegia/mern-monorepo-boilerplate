@@ -13,7 +13,7 @@
     "build": "lerna run --concurrency 1 build --stream",
     "prettier": "prettier --write \"packages/**/*.js\"",
     "detect:changes": "lerna changed",
-    "update-version": "lerna publish --conventional-commits --skip-npm --force-publish '*'"
+    "update-version": "lerna version --conventional-commits --skip-npm --force-publish '*'"
   },
   "workspaces": [
     "packages/*"
