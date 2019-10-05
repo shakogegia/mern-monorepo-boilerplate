@@ -6,6 +6,7 @@
   "author": "Shalva Gegia <shalva.gegia@gmail.com>",
   "homepage": "https://github.com/shakogegia/mern-monorepo-boilerplate/tree/master/packages/constants#readme",
   "license": "ISC",
+  "private": true,
   "main": "build/index.js",
   "scripts": {
     "start": "babel ./src -d build -w",

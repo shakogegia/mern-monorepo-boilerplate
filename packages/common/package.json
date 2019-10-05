@@ -7,6 +7,7 @@
   "homepage": "https://github.com/shakogegia/mern-monorepo-boilerplate/tree/master/packages/common#readme",
   "license": "ISC",
   "main": "build/index.js",
+  "private": true,
   "scripts": {
     "start": "babel ./src -d build -w",
     "build": "babel ./src --out-dir build"
