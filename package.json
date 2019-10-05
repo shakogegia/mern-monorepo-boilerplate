@@ -1,0 +1,37 @@
+{
+  "name": "mern-monorepo-boilerplate",
+  "version": "1.0.0",
+  "description": "MERN Monorepo Boilerplate",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build --stream",
+    "watch-api": "cd packages/api && yarn dev",
+    "watch-socket": "cd packages/socket && yarn dev",
+    "watch-client": "cd packages/client && yarn start",
+    "dev": "concurrently -n w \"yarn:watch-*\"",
+    "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakogegia/mern-monorepo-boilerplate.git"
+  },
+  "keywords": [
+    "mern",
+    "monorepo",
+    "boilerplate"
+  ],
+  "author": "shalva.gegia@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shakogegia/mern-monorepo-boilerplate/issues"
+  },
+  "homepage": "https://github.com/shakogegia/mern-monorepo-boilerplate#readme",
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "cross-env": "^6.0.3",
+    "lerna": "^3.16.4"
+  }
+}
