@@ -12,7 +12,8 @@
     "watch-constants": "cd packages/constants && yarn start",
     "build": "lerna run --concurrency 1 build --stream",
     "prettier": "prettier --write \"packages/**/*.js\"",
-    "update-version": "lerna publish --skip-npm --force-publish '*'"
+    "detect:changes": "lerna changed",
+    "update-version": "lerna publish --conventional-commits --skip-npm --force-publish '*'"
   },
   "workspaces": [
     "packages/*"
