@@ -18,7 +18,7 @@ const path = require("path")
  */
 exports.createReactNativeConfiguration = function createReactNativeConfiguration(
   projectPath,
-) {
+  ) {
   projectPath = path.resolve(projectPath)
   debug(
     `Creating a React Native configuration for the project at %s`,

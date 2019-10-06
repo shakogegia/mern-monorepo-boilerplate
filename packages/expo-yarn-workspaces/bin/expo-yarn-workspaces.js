@@ -18,17 +18,21 @@ switch (argv._[0]) {
     break
 
   case "postinstall":
-    child_process.execFileSync(
-      path.join(__dirname, "symlink-necessary-packages.js"),
-      {
-        stdio: "inherit",
-      },
-    )
-    child_process.execFileSync(
-      path.join(__dirname, "make-entry-module.js"),
-      {
-        stdio: "inherit",
-      },
-    )
+    try {
+      child_process.execFileSync(
+        path.join(__dirname, "symlink-necessary-packages.js"),
+        {
+          stdio: "inherit",
+        },
+      )
+      child_process.execFileSync(
+        path.join(__dirname, "make-entry-module.js"),
+        {
+          stdio: "inherit",
+        },
+      )
+    } catch (error) {
+      console.log("TCL: error", error)
+    }
     break
 }

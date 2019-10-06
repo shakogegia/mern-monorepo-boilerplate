@@ -10,6 +10,7 @@
     "watch-client": "lerna run --scope client start --parallel",
     "watch-common": "lerna run --scope @workspace/common start --parallel",
     "watch-constants": "lerna run --scope @workspace/constants start --parallel",
+    "start-mobile": "lerna --scope=mobile run start --stream --",
     "build": "lerna run --concurrency 1 build --stream",
     "prettier": "prettier --write \"packages/**/*.js\"",
     "commitmsg": "validate-commit-msg",
