@@ -12,17 +12,13 @@
     "watch-constants": "cd packages/constants && yarn start",
     "build": "lerna run --concurrency 1 build --stream",
     "prettier": "prettier --write \"packages/**/*.js\"",
+    "commitmsg": "validate-commit-msg",
     "detect:changes": "lerna changed --all --graph",
-    "update-version": "lerna version --conventional-commits --skip-npm --tag-version-prefix='' --force-publish '*'"
+    "update-version": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --force-publish '*'"
   },
   "workspaces": [
     "packages/*"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-staged"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shakogegia/mern-monorepo-boilerplate.git"
@@ -44,6 +40,9 @@
     "lerna": "^3.16.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-angular": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "conventional-changelog-cli": "^2.0.23",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
