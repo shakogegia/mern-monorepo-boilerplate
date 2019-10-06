@@ -18,3 +18,10 @@ This repository contains API, Socket Server and React Frontend scaffolding.
 ```
 npx lerna add @workspace/common --scope=client
 ```
+
+
+#### Expo
+
+```
+https://github.com/Fried-Chicken/expo-monorepo
+```
