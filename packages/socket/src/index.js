@@ -13,10 +13,11 @@ app.get("/", function(req, res) {
   res.send(`Socket server is listening on *:${process.env.PORT}`)
 })
 
-io.on("connection", function(socket) {
+// eslint-disable-next-line no-unused-vars
+io.on("connection", socket => {
   console.log("a user connected")
 })
 
-server.listen(process.env.PORT, function() {
+server.listen(process.env.PORT, () => {
   console.log("listening on *:", process.env.PORT)
 })
