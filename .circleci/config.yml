@@ -1,10 +1,52 @@
-version: 2
+# version: 2
+# jobs:
+#   build:
+#     docker:
+#       - image: circleci/python:3.6
+#     steps:
+#       - checkout
+#       - run:
+#           command: |
+#             .bin/commit_check.sh
+
+version: 2.1
+
 jobs:
-  build:
+  deploy-service:
     docker:
-      - image: circleci/python:3.6
+      - image: circleci/node:12.6.0
+    parameters:
+      service_path:
+        type: string
+      stage_name:
+        type: string
     steps:
       - checkout
       - run:
+          name: install aws cli
           command: |
-            .circleci/commit_check.sh
+            sudo apt-get update
+            sudo apt-get -y install python3-pip
+            sudo pip3 install awscli
+      - run:
+          name: install yarn
+          command: |
+            sudo npm i -g yarn
+
+workflows:
+  build-deploy:
+    jobs:
+      - deploy-service:
+          name: Deploy API
+          service_path: packages/users-api
+          stage_name: ${CIRCLE_BRANCH}
+          
+      - deploy-service:
+          name: Deploy Socket
+          service_path: packages/posts-api
+          stage_name: ${CIRCLE_BRANCH}
+          
+      - deploy-service:
+          name: Deploy Client
+          service_path: packages/cron-job
+          stage_name: ${CIRCLE_BRANCH}
