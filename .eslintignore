@@ -1,1 +1,14 @@
-node_modules/*
+/.cache
+.tmp
+
+# Ignore all node_modules
+**/node_modules/**
+
+# Ignore all dist
+**/dist/**
+
+# Ignore all build
+**/build/**
+
+*.log
+*.production

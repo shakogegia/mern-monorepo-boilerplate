@@ -1,0 +1,27 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier"
+  ],
+  "jsRules": {},
+  "rules": {
+    "quotemark": [true, "single"],
+    "indent": [true, "spaces", 2],
+    "interface-name": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-consecutive-blank-lines": false
+  },
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": [
+      "bin",
+      "**/dist/**/*",
+      "**/build/**/*",
+      "**/*/*.e2e.ts",
+      "node_modules/**",
+      "**/node_modules/**"
+    ]
+  }
+}

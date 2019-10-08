@@ -1,10 +1,10 @@
-var express = require("express")
-var router = express.Router()
-var common = require("@workspace/constants")
+const express = require("express")
 
-/* GET home page. */
-router.get("/", function(req, res, next) {
-  res.render("index", { title: "Express", common: common })
+const router = express.Router()
+const common = require("@workspace/constants")
+
+router.get("/", function(req, res) {
+  res.render("index", { title: "Express BREACKING", common })
 })
 
 module.exports = router

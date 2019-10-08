@@ -1,11 +1,12 @@
 {
   "name": "@workspace/constants",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
   "author": "Shalva Gegia <shalva.gegia@gmail.com>",
   "homepage": "https://github.com/shakogegia/mern-monorepo-boilerplate/tree/master/packages/constants#readme",
   "license": "ISC",
+  "private": true,
   "main": "build/index.js",
   "scripts": {
     "start": "babel ./src -d build -w",

@@ -5,23 +5,22 @@
   "private": true,
   "scripts": {
     "dev": "concurrently -n w \"yarn:watch-*\"",
-    "watch-api": "cd packages/api && yarn watch",
-    "watch-socket": "cd packages/socket && yarn watch",
-    "watch-client": "cd packages/client && yarn start",
-    "watch-common": "cd packages/common && yarn start",
-    "watch-constants": "cd packages/constants && yarn start",
+    "watch-api": "lerna run --scope api watch --parallel",
+    "watch-socket": "lerna run --scope socket watch --parallel",
+    "watch-client": "lerna run --scope client start --parallel",
+    "watch-common": "lerna run --scope @workspace/common start --parallel",
+    "watch-constants": "lerna run --scope @workspace/constants start --parallel",
+    "start-mobile": "lerna --scope=mobile run start --stream --",
     "build": "lerna run --concurrency 1 build --stream",
+    "postinstall": "expo-yarn-workspaces check-workspace-dependencies",
     "prettier": "prettier --write \"packages/**/*.js\"",
-    "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'"
+    "commitmsg": "validate-commit-msg",
+    "detect:changes": "lerna changed --all --graph",
+    "update-version": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --force-publish '*'"
   },
   "workspaces": [
     "packages/*"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-staged"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shakogegia/mern-monorepo-boilerplate.git"
@@ -29,7 +28,8 @@
   "keywords": [
     "mern",
     "monorepo",
-    "boilerplate"
+    "boilerplate",
+    "starter"
   ],
   "author": "shalva.gegia@gmail.com",
   "license": "MIT",
@@ -40,15 +40,25 @@
   "dependencies": {
     "concurrently": "^4.1.2",
     "cross-env": "^6.0.3",
+    "expo-yarn-workspaces": "^1.2.1",
     "lerna": "^3.16.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "conventional-changelog-cli": "^2.0.23",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.8",
     "lint-staged": "^10.0.0-0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "stylelint": "^11.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-prettier": "^1.1.1",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.3"
   }
 }
