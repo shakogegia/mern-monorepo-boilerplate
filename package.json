@@ -27,7 +27,8 @@
   "keywords": [
     "mern",
     "monorepo",
-    "boilerplate"
+    "boilerplate",
+    "starter"
   ],
   "author": "shalva.gegia@gmail.com",
   "license": "MIT",
@@ -50,6 +51,12 @@
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.8",
     "lint-staged": "^10.0.0-0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "stylelint": "^11.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-prettier": "^1.1.1",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.3"
   }
 }
