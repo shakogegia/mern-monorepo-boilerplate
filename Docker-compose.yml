@@ -1,7 +1,7 @@
 version: "3"
 services:
   mongo:
-    container_name: sample_mongo
+    container_name: workspace_mongo
     image: mongo
     ports:
       - "27017:27017"
@@ -10,12 +10,12 @@ services:
 
   redis:
     image: redis
-    container_name: sample_cache
+    container_name: workspace_cache
     expose:
       - 6379
 
   api:
-    container_name: sample_nodejs_api
+    container_name: workspace_api
     restart: always
     build: ./packages/api
     ports:
@@ -29,7 +29,7 @@ services:
     command: yarn debug
 
   socket:
-    container_name: sample_nodejs_socket
+    container_name: workspace_socket
     restart: always
     build: ./packages/socket
     ports:
@@ -49,3 +49,4 @@ services:
       - ./packages/client:/usr/src/app
     links:
       - api
+      - socket

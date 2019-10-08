@@ -1,15 +1,16 @@
 import http from "http"
 import express from "express"
 import SocketIO from "socket.io"
-import dotenv from "dotenv"
-
-dotenv.config()
+import redis from "socket.io-redis"
+import "dotenv/config"
 
 const app = express()
 const server = http.createServer(app)
 const io = SocketIO(server)
 
-app.get("/", function(req, res) {
+io.adapter(redis({ host: process.env.REDIS_HOST, port: process.env.REDIS_PORT }))
+
+app.get("/", (_, res) => {
   res.send(`Socket server is listening on *:${process.env.PORT}`)
 })
 

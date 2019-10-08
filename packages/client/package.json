@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "@workspace/client",
   "version": "1.0.6",
   "private": true,
   "dependencies": {
