@@ -44,7 +44,7 @@ cd mern-monorepo-boilerplate
 yarn
 
 # run by
-yarn watch
+yarn dev
 ```
 
 ## Link Packages
