@@ -12,11 +12,11 @@ This repository contains API, Socket Server, React and React Native.
 
 ## Packages
 
-- [x] Express.js ~4.16.1
-- [x] Socket.IO ^2.3.0
-- [x] React ^16.10.2
-- [x] React-dom ^16.10.2
-- [x] Expo ~35
+- [x] Express.js 4.16.1
+- [x] Socket.IO 2.3.0
+- [x] React 16.10.2
+- [x] React-dom 16.10.2
+- [x] Expo 35
 
 ## Tooling
 
