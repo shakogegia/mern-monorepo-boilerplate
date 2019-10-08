@@ -1,4 +1,4 @@
-![Image](https://i.imgur.com/XNR2meH.png)
+![Image](https://i.imgur.com/GFf41dB.png)
 
 # MERN Monorepo Boilerplate
 
