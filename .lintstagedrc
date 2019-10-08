@@ -1,7 +1,24 @@
 {
-  "*.js": [
+  "*.{js, jsx}": [
     "eslint --fix",
     "prettier --write",
-    "git add ."
+    "git add"
+  ],
+  "*.{ts,tsx}": [
+    "tslint --fix",
+    "prettier --write",
+    "git add"
+  ],
+  "*.{md,html}": [
+    "prettier --write",
+    "git add"
+  ],
+  "*.css": [
+    "yarn stylelint",
+    "git add"
+  ],
+  "*.scss": [
+    "stylelint --fix",
+    "git add"
   ]
 }
