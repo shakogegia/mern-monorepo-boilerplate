@@ -1,6 +1,6 @@
 ---
 name: "\U0001F41B Bug Report in Expo SDK"
-about: You want to report a reproducible bug or regression in Expo SDK.
+about: You want to report a reproducible bug or regression in MERN Boilerplate.
 title: ""
 labels: "bug"
 assignees: ""

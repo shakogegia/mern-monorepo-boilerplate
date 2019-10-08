@@ -1,14 +1,12 @@
 ---
 name: "❓ Questions and discussions"
-about: You have a question about Expo or want to discuss some aspects of Expo.
+about: You have a question about MERN Boilerplate or want to discuss some aspects of MERN Boilerplate.
 title: ""
-labels: ""
+labels: "question"
 assignees: ""
 ---
 
 <!--
-  If you have a question about Expo or want to discuss about related aspects, consider posting it
-  on our forums at https://forums.expo.io/. 🙂
+  If you have a question about MERN Boilerplate or want to discuss about related aspects, consider posting it
+  on our github issues. 🙂
 -->
-
-### Please note that discussions opened as issues in the core Expo repository will be closed.
