@@ -25,6 +25,22 @@ This repository contains API, Socket Server, React and React Native.
 - [x] Precomit Lint
 - [x] Versioning
 
+## Usage
+
+```sh
+# clone repository
+git clone git@github.com:shakogegia/mern-monorepo-boilerplate.git
+
+# cd into
+cd mern-monorepo-boilerplate
+
+# install required dependencies
+yarn
+
+# run by
+yarn watch
+```
+
 ## Link Packages
 
 ```
