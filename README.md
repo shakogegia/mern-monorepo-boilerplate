@@ -8,6 +8,7 @@ This repository contains API, Socket Server, React and React Native.
 - MongoDB: A document-based open source database
 - Express: A Fast, unopinionated, minimalist web framework for Node.js
 - React: A JavaScript front-end library for building user interfaces
+- Expo: a set of tools and services for building, deploying, and quickly iterating on native iOS, and Android apps from the same codebase.
 
 ## Packages
 
@@ -24,6 +25,11 @@ This repository contains API, Socket Server, React and React Native.
 - [x] Prettier
 - [x] Precomit Lint
 - [x] Versioning
+
+## Monorepo
+
+- [x] Yarn workspaces
+- [x] Lerna.js
 
 ## Usage
 
