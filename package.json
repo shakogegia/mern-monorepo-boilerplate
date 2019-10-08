@@ -12,6 +12,7 @@
     "watch-constants": "lerna run --scope @workspace/constants start --parallel",
     "start-mobile": "lerna --scope=mobile run start --stream --",
     "build": "lerna run --concurrency 1 build --stream",
+    "postinstall": "expo-yarn-workspaces check-workspace-dependencies",
     "prettier": "prettier --write \"packages/**/*.js\"",
     "commitmsg": "validate-commit-msg",
     "detect:changes": "lerna changed --all --graph",
@@ -39,6 +40,7 @@
   "dependencies": {
     "concurrently": "^4.1.2",
     "cross-env": "^6.0.3",
+    "expo-yarn-workspaces": "^1.2.1",
     "lerna": "^3.16.4"
   },
   "devDependencies": {

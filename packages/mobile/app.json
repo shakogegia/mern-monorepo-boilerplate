@@ -20,15 +20,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "packagerOpts": {
-      "config": "./rn-cli.config.js"
-    },
-    "rnCliPath" : "./node_modules/react-native/local-cli/cli.js",
-    "nodeModulesPath": "../../",
-    "entryPoint": "./App.js",
     "assetBundlePatterns": [
       "**/*"
     ],
+    "packagerOpts": {
+      "config": "metro.config.js"
+    },
     "ios": {
       "supportsTablet": true
     }
