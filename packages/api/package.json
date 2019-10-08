@@ -4,13 +4,11 @@
   "private": true,
   "scripts": {
     "start": "yarn prod",
-    "server": "babel-node ./src/bin/www",
-    "server:prod": "node ./build/bin/www",
-    "dev": "NODE_ENV=development yarn server",
+    "dev": "nodemon",
+    "serve": "babel-node ./src/bin/www",
+    "serve:prod": "node ./build/bin/www",
     "clean": "rimraf build",
-    "build": "babel ./src --out-dir build",
-    "prod": "NODE_ENV=production yarn clean && yarn build && yarn server:prod",
-    "watch": "nodemon"
+    "build": "babel ./src --out-dir build --source-maps --copy-files ./src"
   },
   "dependencies": {
     "@workspace/common": "^1.0.6",
@@ -28,6 +26,7 @@
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/node": "^7.6.2",
-    "@babel/preset-env": "^7.6.2"
+    "@babel/preset-env": "^7.6.2",
+    "nodemon": "^1.19.3"
   }
 }

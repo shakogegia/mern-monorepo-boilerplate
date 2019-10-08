@@ -10,7 +10,9 @@
   "main": "build/index.js",
   "scripts": {
     "start": "babel ./src -d build -w",
-    "build": "babel ./src --out-dir build"
+    "dev": "babel ./src -d build -w",
+    "build": "babel ./src --out-dir build",
+    "prepare": "yarn build"
   },
   "directories": {
     "lib": "lib",

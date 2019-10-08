@@ -1,6 +1,6 @@
 
 {
-  "exec": "yarn dev",
+  "exec": "yarn serve",
   "watch": ["src/*"],
   "ext": "js, json"
 }

@@ -1,10 +1,10 @@
-const express = require("express")
+import constants from "@workspace/constants"
+import express from "express"
 
 const router = express.Router()
-const common = require("@workspace/constants")
 
 router.get("/", function(req, res) {
-  res.render("index", { title: "Express BREACKING", common })
+  res.render("index", { title: "Express BREACKING", constants })
 })
 
 module.exports = router

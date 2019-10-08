@@ -5,16 +5,23 @@ FROM node:12.6.0
 WORKDIR /usr/src/app
 
 # Duplicate the dependency file to the container's project root directory.
-COPY package*.json ./
+COPY package.json /usr/src/app/
+COPY yarn.lock /usr/src/app/
+COPY lerna.json /usr/src/app/
+
+COPY packages/common/package.json /usr/src/app/packages/common/
+COPY packages/constants/package.json /usr/src/app/packages/constants/
+COPY packages/api/package.json /usr/src/app/packages/api/
 
 # Install app dependencies
-RUN yarn && mv /usr/src/app/node_modules /node_modules
+RUN yarn
+RUN yarn lerna bootstrap
 
 # Bundle app source inside the docker image
 COPY . .
 
-# Expose our app port inside the app and 
+# Expose our app port inside the app and [HOST:CONTAINER]
 EXPOSE 3030:3030
 
 # Define commands that will run the app
-CMD ["yarn", "start"]
+CMD ["yarn", "lerna", "run", "watch", "--stream", "--scope", "@workspace/api"]

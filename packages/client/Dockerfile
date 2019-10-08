@@ -1,41 +1,27 @@
 # Define the image we will use and version
 FROM node:12.6.0
 
-# Environment
+# Create an app directory to hold the application code
 WORKDIR /usr/src/app
-ENV NODE_ENV=development
 
-# Dependencies
-
+# Duplicate the dependency file to the container's project root directory.
 COPY package.json /usr/src/app/
 COPY yarn.lock /usr/src/app/
 COPY lerna.json /usr/src/app/
 
-COPY packages/client/package.json /usr/src/app/packages/client/
-COPY packages/client/yarn.lock /usr/src/app/packages/client/
-
 COPY packages/common/package.json /usr/src/app/packages/common/
-COPY packages/constants/yarn.lock /usr/src/app/packages/constants/
+COPY packages/constants/package.json /usr/src/app/packages/constants/
+COPY packages/api/package.json /usr/src/app/packages/client/
 
-COPY packages/common/package.json /usr/src/app/packages/common/
-COPY packages/constants/yarn.lock /usr/src/app/packages/constants/
-
-# RUN npm ci --ignore-scripts --production --no-optional
+# Install app dependencies
 RUN yarn
-RUN npx lerna bootstrap --hoist
+RUN yarn lerna bootstrap
 
+# Bundle app source inside the docker image
+COPY . .
 
-# Build
-
-COPY . /usr/src/app/
-RUN cd packages/client
-
-# Expose our app port inside the app and 
-EXPOSE 3030:3030
+# Expose our app port inside the app and [HOST:CONTAINER]
+EXPOSE 3000:3000
 
 # Define commands that will run the app
-CMD ["yarn", "start"]
-
-# Serve
-# FROM nginx:1.15-alpine
-# COPY --from=builder /usr/src/app/packages/alice/build /usr/share/nginx/html
+CMD ["yarn", "lerna", "run", "start", "--stream", "--scope", "@workspace/client"]

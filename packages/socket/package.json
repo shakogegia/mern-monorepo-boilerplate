@@ -4,13 +4,11 @@
   "private": true,
   "scripts": {
     "start": "yarn prod",
-    "server": "babel-node ./src/index.js",
-    "server:prod": "node ./build/index.js",
-    "dev": "NODE_ENV=development yarn server",
+    "dev": "nodemon",
+    "serve": "babel-node ./src/index.js",
+    "serve:prod": "node ./build/index.js",
     "clean": "rimraf build",
-    "build": "babel ./src --out-dir build",
-    "prod": "NODE_ENV=production yarn clean && yarn build && yarn server:prod",
-    "watch": "nodemon"
+    "build": "babel ./src --out-dir build"
   },
   "dependencies": {
     "@workspace/constants": "^1.0.6",
@@ -21,6 +19,10 @@
     "socket.io-redis": "^5.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.2"
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "nodemon": "^1.19.3"
   }
 }
