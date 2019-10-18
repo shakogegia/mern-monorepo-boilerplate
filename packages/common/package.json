@@ -1,16 +1,16 @@
 {
-  "name": "@workspace/common",
-  "version": "1.0.6",
+  "name": "@wordic/common",
+  "version": "0.0.2",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
   "author": "Shalva Gegia <shalva.gegia@gmail.com>",
-  "homepage": "https://github.com/shakogegia/mern-monorepo-boilerplate/tree/master/packages/common#readme",
+  "homepage": "https://github.com/shakogegia/wordic/tree/master/packages/common#readme",
   "license": "ISC",
   "main": "build/index.js",
   "private": true,
   "scripts": {
-    "start": "babel ./src -d build -w",
-    "dev": "babel ./src -d build -w",
+    "start": "babel ./src -d build --out-dir -w",
+    "dev": "babel ./src -d build --out-dir -w",
     "build": "babel ./src --out-dir build",
     "prepare": "yarn build"
   },
@@ -29,6 +29,6 @@
     "babel-watch": "^7.0.0"
   },
   "dependencies": {
-    "@workspace/constants": "^1.0.6"
+    "@wordic/constants": "^0.0.2"
   }
 }
