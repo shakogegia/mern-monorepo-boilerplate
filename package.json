@@ -13,7 +13,7 @@
     "detect:changes": "lerna changed --all --graph",
     "update-version": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --force-publish '*'",
     "force-package": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --ignore-changes '**' --force-publish",
-    "publish-package": "lerna version --conventional-commits --skip-npm --force-publish"
+    "publish-package": "lerna version --create-release github --conventional-commits --skip-npm --force-publish"
   },
   "workspaces": [
     "packages/*"
