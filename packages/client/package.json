@@ -1,5 +1,5 @@
 {
-  "name": "@workspace/client",
+  "name": "@wordic/client",
   "version": "1.0.8",
   "private": true,
   "scripts": {
