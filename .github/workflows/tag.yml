@@ -2,7 +2,7 @@ name: Tag Workflow
 
 on:
   release:
-    - '*'
+    types: [published, unpublished, created, edited, deleted, prereleased]
 
 jobs:
   build:
