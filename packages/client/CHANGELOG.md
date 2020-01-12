@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.29](https://github.com/shakogegia/mern-monorepo-boilerplate/compare/@wordic/client@1.1.28...@wordic/client@1.1.29) (2020-01-12)
+
+**Note:** Version bump only for package @wordic/client
+
 ## [1.1.28](https://github.com/shakogegia/mern-monorepo-boilerplate/compare/@wordic/client@1.1.27...@wordic/client@1.1.28) (2020-01-12)
 
 **Note:** Version bump only for package @wordic/client
