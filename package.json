@@ -11,7 +11,8 @@
     "prettier": "prettier --write \"packages/**/*.js\"",
     "lint": "eslint .",
     "detect:changes": "lerna changed --all --graph",
-    "update-version": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --force-publish '*'"
+    "update-version": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --force-publish '*'",
+    "publish-package": "yarn lerna publish --ignore-changes '**' --force-publish"
   },
   "workspaces": [
     "packages/*"
