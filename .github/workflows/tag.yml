@@ -1,13 +1,13 @@
-name: Client Workflow
+name: Tag Workflow
 
 on:
   push:
     tags:
-      - '*@wordic/client@*'
+      - '*'
 
 jobs:
   build:
-    name: Deploy Client
+    name: Deploy Tag
 
     runs-on: ubuntu-latest
 
