@@ -1,8 +1,8 @@
 name: Tag Workflow
 
 on:
-  push:
-    tags
+  release:
+    - '*'
 
 jobs:
   build:
