@@ -12,7 +12,8 @@
     "lint": "eslint .",
     "detect:changes": "lerna changed --all --graph",
     "update-version": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --force-publish '*'",
-    "publish-package": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --ignore-changes '**' --force-publish"
+    "force-package": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --ignore-changes '**' --force-publish",
+    "publish-package": "lerna publish --conventional-commits --skip-npm --force-publish"
   },
   "workspaces": [
     "packages/*"
