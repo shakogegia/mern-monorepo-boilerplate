@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@workspace/common": "^1.0.6",
-    "@workspace/constants": "^1.0.6",
+    "@wordic/constants": "^1.0.6",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
