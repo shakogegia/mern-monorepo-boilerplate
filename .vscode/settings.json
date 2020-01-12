@@ -5,5 +5,8 @@
 
   "[git-commit]": {
     "editor.rulers": [72]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }
