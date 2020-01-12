@@ -3,7 +3,7 @@ name: Client Workflow
 on:
   push:
     tags:
-      - '@wordic/client@*'
+      - '*@wordic/client@*'
 
 jobs:
   build:
