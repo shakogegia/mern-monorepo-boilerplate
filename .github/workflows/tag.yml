@@ -3,9 +3,9 @@ name: Tag Workflow
 on:
   push:
     # Sequence of patterns matched against refs/heads
-    branches:    
-      - master         # Push events on master branch
-      - 'releases/**'  # Push events to branches matching refs/heads/releases/10
+    # branches:    
+    #   - master         # Push events on master branch
+    #   - 'releases/**'  # Push events to branches matching refs/heads/releases/10
     # Sequence of patterns matched against refs/tags
     tags:        
       - '**/*@wordic/api@*'
