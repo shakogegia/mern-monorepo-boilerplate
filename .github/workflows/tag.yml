@@ -8,7 +8,7 @@ on:
       - 'releases/**'  # Push events to branches matching refs/heads/releases/10
     # Sequence of patterns matched against refs/tags
     tags:        
-      - @wordic/api@*
+      - '**/*@wordic/api@*'
 
 jobs:
   build:
