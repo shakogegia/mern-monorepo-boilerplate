@@ -11,6 +11,7 @@ on:
       - '**/*'
       - '*'
       - '**'
+      - '@workdic/constants@*'
 
 jobs:
   build:
