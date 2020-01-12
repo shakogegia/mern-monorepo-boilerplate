@@ -2,9 +2,7 @@ name: API Workflow
 
 on:
   release:
-    types:
-      - published
-      - created
+    types: [created, published]
 
 jobs:
   build:
