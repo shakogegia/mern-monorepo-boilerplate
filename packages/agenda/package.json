@@ -1,0 +1,48 @@
+{
+  "name": "@wordic/agenda",
+  "version": "0.0.2",
+  "description": "> TODO: description",
+  "author": "Shalva Gegia <shalva.gegia@gmail.com>",
+  "homepage": "https://github.com/shakogegia/wordic/tree/master/packages/agenda#readme",
+  "license": "MIT",
+  "main": "lib/agenda.js",
+  "private": true,
+  "scripts": {
+    "start": "yarn prod",
+    "dev": "nodemon",
+    "serve": "babel-node ./src/index.js",
+    "serve:prod": "node ./build/index.js",
+    "clean": "rimraf build",
+    "build": "babel ./src --out-dir build --source-maps --copy-files ./src",
+    "prepare": "yarn build"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakogegia/wordic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shakogegia/wordic/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "babel-watch": "^7.0.0"
+  },
+  "dependencies": {
+    "@wordic/constants": "^0.0.2",
+    "@wordic/models": "^0.0.2",
+    "agenda": "^2.1.0",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.7.5",
+    "rimraf": "^3.0.0"
+  }
+}

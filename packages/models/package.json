@@ -1,13 +1,13 @@
 {
-  "name": "@wordic/constants",
+  "name": "@wordic/models",
   "version": "0.0.2",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
   "author": "Shalva Gegia <shalva.gegia@gmail.com>",
-  "homepage": "https://github.com/shakogegia/wordic/tree/master/packages/constants#readme",
+  "homepage": "https://github.com/shakogegia/wordic/tree/master/packages/models#readme",
   "license": "ISC",
-  "private": true,
   "main": "build/index.js",
+  "private": true,
   "scripts": {
     "start": "babel ./src -d build --out-dir -w",
     "dev": "babel ./src -d build --out-dir -w",
@@ -24,11 +24,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shakogegia/wordic.git"
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "babel-watch": "^7.0.0"
   },
-  "bugs": {
-    "url": "https://github.com/shakogegia/wordic/issues"
+  "dependencies": {
+    "@wordic/constants": "^0.0.2",
+    "mongoose": "^5.7.5"
   }
 }
