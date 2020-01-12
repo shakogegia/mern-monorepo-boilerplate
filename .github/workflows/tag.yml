@@ -3,9 +3,9 @@ name: Tag Workflow
 on:
   push:
     # Sequence of patterns matched against refs/heads
-    # branches:    
-    #   - master         # Push events on master branch
-    #   - 'releases/**'  # Push events to branches matching refs/heads/releases/10
+    branches:    
+      - master         # Push events on master branch
+      - 'releases/**'  # Push events to branches matching refs/heads/releases/10
     # Sequence of patterns matched against refs/tags
     tags:        
       - '**/*@wordic/api@*'
@@ -27,3 +27,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Extract tag name
+          id: tag
+          uses: actions/github-script@0.2.0
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            script: |
+              return context.payload.ref.replace(/\/refs\/tags\//, '');
+        - name: Echo
+          run: echo ${{ steps.tag.outputs.result }}
