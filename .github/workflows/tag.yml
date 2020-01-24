@@ -1,7 +1,7 @@
 name: Tag Workflow
 
-on:
-  create:
+# on:
+#   create:
   #   types:
   #     - published
     # Sequence of patterns matched against refs/heads
@@ -9,8 +9,11 @@ on:
     #   - master         # Push events on master branch
     #   - 'releases/**'  # Push events to branches matching refs/heads/releases/10
     # Sequence of patterns matched against refs/tags
-    tags:
-      - '@wordic/constants@*'
+    # tags:
+    #   - '@wordic/constants@*'
+on:
+  release:
+    types: [created]
 
 jobs:
   build:
