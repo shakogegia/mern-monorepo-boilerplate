@@ -19,7 +19,7 @@ name: Tag Workflow
 on:
   create:
     tags:
-      - '@wordic/client@*'
+      - '@wordic/*'
 
 jobs:
   build:
