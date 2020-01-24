@@ -15,7 +15,7 @@ on:
   release:
     types: [published, created, edited]
     tags:
-      - '@wordic/@wordic/client@*'
+      - '@wordic/client@*'
 
 jobs:
   build:
