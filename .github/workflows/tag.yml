@@ -13,7 +13,7 @@ name: Tag Workflow
     #   - '@wordic/constants@*'
 on:
   release:
-    types: [published, created, edited]
+    # types: [published, created, edited]
     tags:
       - '@wordic/client@*'
 
