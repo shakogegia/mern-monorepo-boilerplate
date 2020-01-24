@@ -13,7 +13,9 @@ name: Tag Workflow
     #   - '@wordic/constants@*'
 on:
   release:
-    types: [created]
+    types: [published, created, edited]
+    tags:
+      - '@wordic/constants@*'
 
 jobs:
   build:
