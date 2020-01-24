@@ -19,7 +19,7 @@ name: Tag Workflow
 on:
   create:
     tags:
-      - **client**
+      - '**client**'
 
 jobs:
   build:
