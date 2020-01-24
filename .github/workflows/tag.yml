@@ -11,11 +11,15 @@ name: Tag Workflow
     # Sequence of patterns matched against refs/tags
     # tags:
     #   - '@wordic/constants@*'
+# on:
+#   release:
+#     # types: [published, created, edited]
+#     tags:
+#       - '@wordic/client@*'
 on:
-  release:
-    # types: [published, created, edited]
+  create:
     tags:
-      - '@wordic/client@*'
+      - **client**
 
 jobs:
   build:
