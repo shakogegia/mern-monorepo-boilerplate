@@ -19,7 +19,6 @@ name: Tag Workflow
 on:
   create:
     tags:
-      - '@wordic/**'
 
 jobs:
   build:
@@ -47,6 +46,6 @@ jobs:
             return context.payload.ref.replace('refs/tags/@wordic/', '')
       - name: Echo
         run: echo ${{ steps.tag.outputs.result }}
-        
+
       - name: Echo
         run: echo ${{ github.ref }}
