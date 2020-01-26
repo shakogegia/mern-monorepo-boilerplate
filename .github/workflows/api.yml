@@ -18,14 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - uses: actions/github-script@0.4.0
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const package = context.payload.pull_request.diff_url
-            const result = await github.request(diff_url)
-            console.log(result)
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
