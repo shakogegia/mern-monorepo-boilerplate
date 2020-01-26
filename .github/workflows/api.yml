@@ -54,4 +54,4 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: api-${{ steps.vars.outputs.tag }}
-          path: packages/api/Dockerfile
+          path: packages/api/*
