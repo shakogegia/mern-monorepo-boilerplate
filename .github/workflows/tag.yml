@@ -44,7 +44,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            return context.payload.ref.replace(/\/refs\/tags\/@wordic\//, '');
+            return context.payload.ref.replace('refs/tags/@wordic/', '')
       - name: Echo
         run: echo ${{ steps.tag.outputs.result }}
       - name: Echo
