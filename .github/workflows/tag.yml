@@ -18,6 +18,7 @@ name: Tag Workflow
 #       - '@wordic/client@*'
 
 on:
+  release:
   create:
     tags:
 
