@@ -50,8 +50,12 @@ jobs:
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF:10}
 
+      - name: Zip Folder
+        run: zip -r api.zip packages/api/
+
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
+          # name: api-${{ steps.vars.outputs.tag }}
           name: api
-          path: packages/api/**
+          path: api.zip
