@@ -16,6 +16,7 @@ name: Tag Workflow
 #     # types: [published, created, edited]
 #     tags:
 #       - '@wordic/client@*'
+
 on:
   create:
     tags:
