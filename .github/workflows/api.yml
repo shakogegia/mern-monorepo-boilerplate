@@ -42,7 +42,7 @@ jobs:
   
       - name: Bootstrap
         run: |
-          yarn lerna bootstrap --scope @stack/nc-profile
+          yarn lerna bootstrap --scope @wordic/api
         env:
           CI: true
 
