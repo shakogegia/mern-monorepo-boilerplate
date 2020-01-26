@@ -1,6 +1,6 @@
 {
   "name": "@wordic/client",
-  "version": "1.1.43",
+  "version": "1.1.44",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
@@ -13,7 +13,7 @@
     "extends": "react-app"
   },
   "dependencies": {
-    "@wordic/constants": "^0.0.53",
+    "@wordic/constants": "^0.0.54",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
