@@ -1,6 +1,6 @@
 {
   "name": "@wordic/api",
-  "version": "0.3.24",
+  "version": "0.3.25",
   "private": true,
   "scripts": {
     "start": "yarn prod",
@@ -12,7 +12,7 @@
     "prepare": "yarn build"
   },
   "dependencies": {
-    "@wordic/models": "^0.0.51",
+    "@wordic/models": "^0.0.52",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.1.0",
