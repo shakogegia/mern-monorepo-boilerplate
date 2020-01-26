@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.53](https://github.com/shakogegia/wordic/compare/@wordic/constants@0.0.52...@wordic/constants@0.0.53) (2020-01-26)
+
+**Note:** Version bump only for package @wordic/constants
+
 ## [0.0.52](https://github.com/shakogegia/wordic/compare/@wordic/constants@0.0.51...@wordic/constants@0.0.52) (2020-01-26)
 
 **Note:** Version bump only for package @wordic/constants

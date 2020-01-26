@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.28](https://github.com/shakogegia/mern-monorepo-boilerplate/compare/@wordic/api@0.3.27...@wordic/api@0.3.28) (2020-01-26)
+
+**Note:** Version bump only for package @wordic/api
+
 ## [0.3.27](https://github.com/shakogegia/mern-monorepo-boilerplate/compare/@wordic/api@0.3.26...@wordic/api@0.3.27) (2020-01-26)
 
 **Note:** Version bump only for package @wordic/api

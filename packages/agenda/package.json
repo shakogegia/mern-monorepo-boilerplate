@@ -1,6 +1,6 @@
 {
   "name": "@wordic/agenda",
-  "version": "1.0.48",
+  "version": "1.0.49",
   "description": "> TODO: description",
   "author": "Shalva Gegia <shalva.gegia@gmail.com>",
   "homepage": "https://github.com/shakogegia/wordic/tree/master/packages/agenda#readme",
@@ -38,8 +38,8 @@
     "babel-watch": "^7.0.0"
   },
   "dependencies": {
-    "@wordic/constants": "^0.0.52",
-    "@wordic/models": "^0.0.52",
+    "@wordic/constants": "^0.0.53",
+    "@wordic/models": "^0.0.53",
     "agenda": "^2.1.0",
     "dotenv": "^8.2.0",
     "mongoose": "^5.7.5",
