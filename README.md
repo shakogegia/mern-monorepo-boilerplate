@@ -10,6 +10,8 @@ This repository contains API, Socket Server, React and React Native.
 - React: A JavaScript front-end library for building user interfaces
 - Expo: a set of tools and services for building, deploying, and quickly iterating on native iOS, and Android apps from the same codebase.
 
+![API Workflow](https://github.com/shakogegia/mern-monorepo-boilerplate/workflows/API%20Workflow/badge.svg?branch=master)
+
 ## Packages
 
 - [x] Express.js 4.16.1
