@@ -53,5 +53,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
-          name: api-${{ steps.vars.outputs.tag }}
+          name: api
           path: packages/api/*
