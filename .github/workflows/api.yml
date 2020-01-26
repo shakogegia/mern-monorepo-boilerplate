@@ -18,6 +18,14 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - uses: actions/github-script@0.4.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const package = context.payload.pull_request.diff_url
+            const result = await github.request(diff_url)
+            console.log(result)
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -34,20 +42,24 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Install Dependencies
-        run: |
-          yarn
-        env:
-          CI: true
+      # - name: Install Dependencies
+      #   run: |
+      #     yarn
+      #   env:
+      #     CI: true
   
-      - name: Bootstrap
-        run: |
-          yarn lerna bootstrap --scope @wordic/api
-        env:
-          CI: true
+      # - name: Bootstrap
+      #   run: |
+      #     yarn lerna bootstrap --scope @wordic/api
+      #   env:
+      #     CI: true
+
+      - name: Set output
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF:10}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
-          name: ${{ github.ref }}
+          name: api-${{ steps.vars.outputs.tag }}
           path: packages/api/Dockerfile
