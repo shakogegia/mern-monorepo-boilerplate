@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.57](https://github.com/shakogegia/wordic/compare/@wordic/agenda@1.0.56...@wordic/agenda@1.0.57) (2020-01-27)
+
+**Note:** Version bump only for package @wordic/agenda
+
 ## [1.0.56](https://github.com/shakogegia/wordic/compare/@wordic/agenda@1.0.55...@wordic/agenda@1.0.56) (2020-01-27)
 
 **Note:** Version bump only for package @wordic/agenda
