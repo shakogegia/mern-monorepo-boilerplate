@@ -38,6 +38,8 @@ on:
   create:
     tags:
       - '*'
+  release:
+    types: [published]
 
 jobs:
   build:
