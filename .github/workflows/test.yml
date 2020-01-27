@@ -32,16 +32,7 @@ name: Test Workflow
 #     types: [published, created, edited]
 
 on:
-  push:
-    tags:
-      - "*"
-  create:
-    tags:
-      - '*'
-  release:
-    types: # This configuration does not affect the page_build event above
-      - created
-      - published
+  create
 
 jobs:
   build:
