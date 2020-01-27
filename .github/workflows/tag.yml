@@ -18,12 +18,16 @@ name: Tag Workflow
 #       - '@wordic/client@*'
 
 
-on:
-  release:
-    # types: [published, created, edited]
-  # create:
-    tags:
-      - '*'
+# types: [published, created, edited]
+# create:
+
+
+# on:
+#   release:
+#     tags:
+#       - '*'
+
+on: release
 
 jobs:
   build:
