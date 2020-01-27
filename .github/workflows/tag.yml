@@ -22,7 +22,8 @@ on:
   release:
     # types: [published, created, edited]
   # create:
-    tags: *
+    tags:
+      - *
 
 jobs:
   build:
