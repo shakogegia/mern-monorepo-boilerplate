@@ -28,7 +28,8 @@ name: Tag Workflow
 #       - '*'
 
 on:
-  release
+  release:
+    types: [published, created, edited]
 
 jobs:
   build:
