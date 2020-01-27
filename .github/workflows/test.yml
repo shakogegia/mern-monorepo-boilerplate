@@ -32,7 +32,7 @@ name: Test Workflow
 #     types: [published, created, edited]
 
 on:
-  create
+  push
 
 jobs:
   build:
