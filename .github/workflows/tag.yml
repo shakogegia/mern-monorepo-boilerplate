@@ -20,8 +20,9 @@ name: Tag Workflow
 
 on:
   release:
-  create:
-    tags:
+    types: [published, created, edited]
+  # create:
+  #   tags:
 
 jobs:
   build:
