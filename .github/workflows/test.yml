@@ -39,7 +39,9 @@ on:
     tags:
       - '*'
   release:
-    types: [published]
+    types: # This configuration does not affect the page_build event above
+      - created
+      - published
 
 jobs:
   build:
