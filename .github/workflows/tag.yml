@@ -27,7 +27,8 @@ name: Tag Workflow
 #     tags:
 #       - '*'
 
-on: release
+on:
+  release
 
 jobs:
   build:
