@@ -23,7 +23,7 @@ on:
     # types: [published, created, edited]
   # create:
     tags:
-      - *
+      - '*'
 
 jobs:
   build:
