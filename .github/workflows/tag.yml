@@ -1,4 +1,4 @@
-name: Tag Workflow
+name: Test Workflow
 
 # on:
 #   create:
@@ -30,6 +30,7 @@ name: Tag Workflow
 # on:
 #   release:
 #     types: [published, created, edited]
+
 
 on:
   push:
