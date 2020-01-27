@@ -36,6 +36,9 @@ on:
   push:
     tags:
       - "*"
+  create:
+    tags:
+      - '@wordic/api@*'
 
 jobs:
   build:
