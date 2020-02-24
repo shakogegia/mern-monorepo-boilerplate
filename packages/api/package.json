@@ -1,6 +1,6 @@
 {
   "name": "@wordic/api",
-  "version": "0.3.53",
+  "version": "0.3.54-alpha.0",
   "private": true,
   "scripts": {
     "start": "yarn prod",
