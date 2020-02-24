@@ -20,4 +20,9 @@ echo "📦  Preparing release for package: ${PACKAGE_NAME}"
 
 DIFF=$(yarn lerna diff ${PACKAGE_NAME})
 
-yarn lerna version --create-release github --ignore-changes '**' --conventional-commits --force-publish ${PACKAGE_NAME}
+if (( $(grep -c . <<<"$DIFF") > 3 )); then
+  yarn lerna version --create-release github --ignore-changes '**' --conventional-commits --conventional-graduate --force-publish ${PACKAGE_NAME}
+else
+  yarn lerna version --create-release github --ignore-changes '**' --conventional-commits --conventional-graduate --force-publish ${PACKAGE_NAME}
+  echo "✅  ${PACKAGE_NAME} has no changes since last release"
+fi 
