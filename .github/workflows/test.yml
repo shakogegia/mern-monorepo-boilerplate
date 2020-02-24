@@ -45,7 +45,7 @@ jobs:
         run: |
           echo ${{ steps.vars.outputs.env_type }}
 
-          . ./tools/setup-env.sh "${{ steps.vars.outputs.env_type }}" 
+          . ./tools/setup-env.sh ${{ steps.vars.outputs.env_type }} INTERCOM_APP_ID
 
           echo "${{ github.ref }}"
 
