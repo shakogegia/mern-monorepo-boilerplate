@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.54-alpha.4](https://github.com/shakogegia/mern-monorepo-boilerplate/compare/@wordic/api@0.3.54-alpha.3...@wordic/api@0.3.54-alpha.4) (2020-02-24)
+
+### Features
+
+- asdas ([22d533c](https://github.com/shakogegia/mern-monorepo-boilerplate/commit/22d533c))
+
+### BREAKING CHANGES
+
+- testset
+
 ## [0.3.54-alpha.3](https://github.com/shakogegia/mern-monorepo-boilerplate/compare/@wordic/api@0.3.54-alpha.2...@wordic/api@0.3.54-alpha.3) (2020-02-24)
 
 **Note:** Version bump only for package @wordic/api
