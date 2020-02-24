@@ -38,7 +38,11 @@ jobs:
       - name: Set Vars
         id: vars
         run: |
-          [[ "${{ github.ref }}" == "refs/heads/master" ]] && ENV_TYPE="PROD" || ENV_TYPE="SE"
+
+          [[ "${{ steps.tag.outputs.result }}" ==  *"BETA"* ]] && ENV_TYPE="SE" || ENV_TYPE="PROD"
+
+          echo $ENV_TYPE
+
           echo ::set-output name=env_type::$ENV_TYPE
 
       - name: Build
