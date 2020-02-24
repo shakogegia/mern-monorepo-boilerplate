@@ -18,8 +18,3 @@ for var in $(echo $ENV_VARS)
   declare $var="$value"
   export $var="$value"
 done
-
-
-[[ $DB == 1 ]] && ENV_TYPE="YES" || ENV_TYPE="NO"
-
-echo $ENV_TYPE
