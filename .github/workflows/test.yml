@@ -39,8 +39,9 @@ jobs:
         id: vars
         run: |
 
-          [[ "${{ steps.tag.outputs.result }}" ==  *"beta"* ]] && ENV_TYPE="SE" || ENV_TYPE="PROD"
+          [[ "${{ github.ref }}" ==  *"beta"* ]] && ENV_TYPE="SE" || ENV_TYPE="PROD"
 
+          echo "${{ github.ref }}"
           echo $ENV_TYPE
 
           echo ::set-output name=env_type::$ENV_TYPE
