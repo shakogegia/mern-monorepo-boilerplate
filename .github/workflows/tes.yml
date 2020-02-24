@@ -1,0 +1,45 @@
+
+name: For Test Workflow
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    name: Deploy Test Workflow
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.13.0]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Set Vars
+        id: vars
+        run: |
+          [[ "${{ github.ref }}" == "refs/heads/master" ]] && ENV_TYPE="PROD" || ENV_TYPE="SE"
+          echo ::set-output name=env_type::$ENV_TYPE
+
+      - name: Build
+        run: |
+          echo ${{ steps.vars.outputs.env_type }}
+
+          . ./tools/setup-env.sh "${{ steps.vars.outputs.env_type }}" 
+
+          echo "${{ github.ref }}"
+
+          echo $INTERCOM_APP_ID
+        env:
+          INTERCOM_APP_ID_PROD: "proda"
+          INTERCOM_APP_ID_SE: "asdiluhalsiudgalsdhlajsdhlajsds"
+          
