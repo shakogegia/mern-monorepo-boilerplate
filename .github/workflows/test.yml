@@ -39,7 +39,7 @@ jobs:
         id: vars
         run: |
 
-          [[ "${{ steps.tag.outputs.result }}" ==  *"BETA"* ]] && ENV_TYPE="SE" || ENV_TYPE="PROD"
+          [[ "${{ steps.tag.outputs.result }}" ==  *"beta"* ]] && ENV_TYPE="SE" || ENV_TYPE="PROD"
 
           echo $ENV_TYPE
 
