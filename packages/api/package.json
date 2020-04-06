@@ -1,6 +1,6 @@
 {
   "name": "@wordic/api",
-  "version": "0.4.2-beta.4",
+  "version": "0.4.2-beta.5",
   "private": true,
   "scripts": {
     "start": "yarn prod",
@@ -10,6 +10,9 @@
     "clean": "rimraf build",
     "build": "babel ./src --out-dir build --source-maps --copy-files ./src",
     "prepare": "yarn build"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "@wordic/models": "^0.0.64",
