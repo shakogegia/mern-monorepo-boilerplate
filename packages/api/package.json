@@ -1,7 +1,7 @@
 {
   "name": "@shakogegia/api",
   "version": "0.4.6",
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "yarn prod",
     "dev": "nodemon",
@@ -10,9 +10,6 @@
     "clean": "rimraf build",
     "build": "babel ./src --out-dir build --source-maps --copy-files ./src",
     "prepare": "yarn build"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "@wordic/models": "^0.0.69",
@@ -33,5 +30,6 @@
     "@babel/node": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "nodemon": "^1.19.3"
-  }
+  },
+  "gitHead": "802a0cce7de8c046cda54120b2ba499aeb156116"
 }
