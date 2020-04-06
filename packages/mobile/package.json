@@ -1,6 +1,6 @@
 {
   "name": "@workspace/mobile",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "./.expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
