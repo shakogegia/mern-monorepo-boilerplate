@@ -1,7 +1,7 @@
 {
   "name": "@shakogegia/api",
-  "version": "0.4.5",
-  "private": true,
+  "version": "0.4.6",
+  "private": false,
   "scripts": {
     "start": "yarn prod",
     "dev": "nodemon",
@@ -15,7 +15,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
-    "@wordic/models": "^0.0.68",
+    "@wordic/models": "^0.0.69",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.1.0",
