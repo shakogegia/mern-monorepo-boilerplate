@@ -1,8 +1,8 @@
 {
-  "name": "mern-monorepo-boilerplate",
-  "version": "1.0.0",
+  "name": "@shakogegia/mern-monorepo-boilerplate",
+  "version": "1.0.2",
   "description": "MERN Monorepo Boilerplate",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "lerna run dev --stream --parallel",
     "build": "lerna run build --concurrency 1 --stream",
@@ -11,9 +11,9 @@
     "prettier": "prettier --write \"packages/**/*.js\"",
     "lint": "eslint .",
     "detect:changes": "lerna changed --all --graph",
-    "update-version": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --force-publish '*'",
-    "force-package": "lerna publish --conventional-commits --skip-npm --tag-version-prefix='' --ignore-changes '**' --force-publish",
-    "publish-package": "lerna version --create-release github --conventional-commits --skip-npm --force-publish",
+    "update-version": "lerna publish --conventional-commits --tag-version-prefix='' --force-publish '*'",
+    "force-package": "lerna publish --conventional-commits --tag-version-prefix='' --ignore-changes '**' --force-publish",
+    "publish-package": "lerna version --create-release github --conventional-commits --force-publish",
     "list-packages": "lerna list -la --toposort",
     "release-package": "./tools/release-package.sh",
     "prerelease-package": "./tools/prerelease.sh"
@@ -42,6 +42,9 @@
     "cross-env": "^6.0.3",
     "expo-yarn-workspaces": "^1.2.1",
     "lerna": "^3.16.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
