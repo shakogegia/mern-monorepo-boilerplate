@@ -27,7 +27,14 @@ jobs:
         uses: svenstaro/upload-release-action@v1-release
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: packages/client/build/*
+          file: packages/client/*
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
+
+      # - uses: Shopify/upload-to-release
+      #   with:
+      #     name: my-artifact
+      #     path: packages/client/build/
+      #     repo-token: ${{ secrets.GITHUB_TOKEN }}
+      #     content-type: text/plain # Optional
